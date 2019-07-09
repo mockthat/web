@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const mockthat = require('@mockthat/core');
 const path = require('path');
 const express = require('express');
