@@ -4,9 +4,16 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonToggleModule } from '@angular/material';
-import { MatIconModule } from '@angular/material';
+import { MatExpansionModule } from '@angular/material';
 
-const modules = [ BrowserModule, CommonModule, HttpClientModule, BrowserAnimationsModule, MatButtonToggleModule, MatIconModule ];
+const modules = [
+  BrowserModule,
+  CommonModule,
+  HttpClientModule,
+  BrowserAnimationsModule,
+  MatButtonToggleModule,
+  MatExpansionModule,
+];
 
 @NgModule({
   imports: [ ...modules ],

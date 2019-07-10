@@ -16,7 +16,6 @@
 .scenario {
   padding: 10px;
   display: flex;
-  border-bottom: 1px solid rgba(#ccc, .5);
   cursor: pointer;
 
   &:hover {
@@ -30,11 +29,10 @@
   border-radius: 50%;
   border: 1px solid #ccc;
   margin-right: 10px;
-  background-color: #d9534f
-}
+  background-color: #d9534f;
 
-.running {
-  .check {
+  &.running {
+
     background-color: #5cb85c;
   }
 }

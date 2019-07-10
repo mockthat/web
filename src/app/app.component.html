@@ -1,12 +1,17 @@
 <ng-container *ngIf="categories$ | async; let categories">
-  <div *ngFor="let categorie of categories">
-    <div class="title">{{ categorie.name }}</div>
+  <mat-expansion-panel *ngFor="let categorie of categories" [expanded]="categorie.running">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <div class="check" [class.running]="categorie.running"></div> {{ categorie.name }}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
     <div
       *ngFor="let scenario of categorie.scenarios"
       (click)="toggle(scenario, categorie)"
-      class="scenario"
-      [class.running]="scenario.running">
-      <div class="check"></div> {{ scenario.name }}
+      class="scenario">
+      <div class="check" [class.running]="scenario.running"></div> {{ scenario.name }}
     </div>
-  </div>
+
+  </mat-expansion-panel>
 </ng-container>
