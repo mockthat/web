@@ -1,0 +1,8 @@
+{
+  "/available-mocks*": {
+    "target": "http://localhost:7000/"
+  },
+  "/mock/*": {
+    "target": "http://localhost:7000/"
+  }
+}
