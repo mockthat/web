@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   }
 
   toggle(scenario: IScenario, category: ICategory) {
-    this.http.get(`/mock/${category.id}/${scenario.id}/${scenario.running ? 'stop' : 'start'}`).subscribe(() => this.refresh());
+    this.http.post(`/mock/${category.id}/${scenario.id}/${scenario.running ? 'stop' : 'start'}`, {}).subscribe(() => this.refresh());
   }
 
   private refresh() {
